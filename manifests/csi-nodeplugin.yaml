@@ -65,7 +65,12 @@ spec:
           lifecycle:
             preStop:
               exec:
-                command: ["/bin/sh", "-c", "rm -rf /registration/kadalu /registration/kadalu-reg.sock"]
+                command:
+                  [
+                    "/bin/sh",
+                    "-c",
+                    "rm -rf /registration/kadalu /registration/kadalu-reg.sock",
+                  ]
           env:
             - name: ADDRESS
               value: /plugin/csi.sock
@@ -86,7 +91,7 @@ spec:
             capabilities:
               add: ["SYS_ADMIN"]
             allowPrivilegeEscalation: true
-          image: docker.io/kadalu/kadalu-csi:devel
+          image: docker.io/kadalu/kadalu-csi:latest
           env:
             - name: NODE_ID
               valueFrom:
@@ -120,7 +125,11 @@ spec:
         - name: kadalu-logging
           image: docker.io/library/busybox
           command: ["/bin/sh"]
-          args: ["-c", "while true; do logcnt=$(/bin/ls /var/log/gluster/ | wc -l); if [ ${logcnt} -gt 0 ]; then break; fi; sleep 5; done; tail -f /var/log/gluster/*.log"]
+          args:
+            [
+              "-c",
+              "while true; do logcnt=$(/bin/ls /var/log/gluster/ | wc -l); if [ ${logcnt} -gt 0 ]; then break; fi; sleep 5; done; tail -f /var/log/gluster/*.log",
+            ]
           volumeMounts:
             - name: varlog
               mountPath: "/var/log/gluster"
