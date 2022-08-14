@@ -601,12 +601,8 @@ def handle_modified(core_v1_client, obj):
         KADALU_CONFIG_MAP, NAMESPACE)
 
     if not configmap_data.data.get("%s.info" % volname, None):
-        # Volume doesn't exists
-        logging.error(logf(
-            "Volume config not found",
-            storagename=volname
-        ))
-        return
+        # Volume doesn't exist, so create it
+        return handle_added(core_v1_client, obj)
 
     # Volume ID (uuid) is already generated, re-use
     cfgmap = json.loads(configmap_data.data[volname + ".info"])
