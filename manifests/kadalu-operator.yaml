@@ -159,6 +159,14 @@ rules:
       - kadalustorages
     verbs:
       - watch
+  - apiGroups:
+      - rbac.authorization.k8s.io
+    resources:
+      - clusterroles
+      - clusterrolebindings
+      - rolebindings
+    verbs:
+      - get
 ---
 # Source: kadalu/charts/operator/templates/rbac.yaml
 # CSI External Attacher
