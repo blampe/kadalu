@@ -82,7 +82,7 @@ pyyaml==5.4.1
     # via kubernetes
 readme-renderer==29.0
     # via twine
-requests==2.25.1
+requests==2.31.0
     # via
     #   kubernetes
     #   requests-oauthlib
