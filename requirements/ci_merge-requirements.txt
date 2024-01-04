@@ -26,7 +26,7 @@ docutils==0.17.1
     # via readme-renderer
 google-auth==1.32.1
     # via kubernetes
-grpcio==1.38.1
+grpcio==1.53.0
     # via Kadalu (setup.py)
 idna==2.10
     # via requests
