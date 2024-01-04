@@ -6,7 +6,7 @@
 #
 googleapis-common-protos==1.53.0
     # via Kadalu (setup.py)
-grpcio==1.38.1
+grpcio==1.53.0
     # via Kadalu (setup.py)
 protobuf==3.17.3
     # via googleapis-common-protos
