@@ -36,7 +36,7 @@ pytz==2021.1
     # via datetime
 pyyaml==5.4.1
     # via uvicorn
-requests==2.25.1
+requests==2.31.0
     # via Kadalu (setup.py)
 starlette==0.14.2
     # via fastapi
