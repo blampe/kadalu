@@ -38,7 +38,7 @@ pyyaml==5.4.1
     # via uvicorn
 requests==2.25.1
     # via Kadalu (setup.py)
-starlette==0.14.2
+starlette==0.36.2
     # via fastapi
 typing-extensions==3.10.0.2
     # via pydantic
