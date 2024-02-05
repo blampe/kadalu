@@ -14,7 +14,7 @@ click==8.0.1
     # via uvicorn
 datetime==4.3
     # via Kadalu (setup.py)
-fastapi==0.68.1
+fastapi==0.109.1
     # via Kadalu (setup.py)
 h11==0.12.0
     # via uvicorn
